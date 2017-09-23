@@ -3,7 +3,7 @@ public class Node {
     public Node next;
 
     public void displayNode(){
-        System.out.println("data: " + data);
+        System.out.printf("data: %s\n", data);
     }
 
 
