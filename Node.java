@@ -1,5 +1,5 @@
-public class Node {
-    public int data;
+public class Node<T extends Comparable<T>>   {
+    public T data;
     public Node next;
 
     public void displayNode(){

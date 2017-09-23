@@ -1,4 +1,4 @@
-public class SinglyLinkedList {
+public class SinglyLinkedList<T extends Comparable<T>> {
     private Node first;
 
     public SinglyLinkedList() {
@@ -11,7 +11,7 @@ public class SinglyLinkedList {
     }
 
     //inserts at start of the list
-    public void insertFirst(int data){
+    public void insertFirst(T data){
         //Creating a new instance of the node
         Node node = new Node();
         // the data of this instance is set to the data passed into this method
@@ -22,7 +22,7 @@ public class SinglyLinkedList {
         first = node;
     }
 
-    public void insertLast(int data){
+    public void insertLast(T data){
         if(first != null){
             //setting the current to the first
             Node current = first;
@@ -63,5 +63,7 @@ public class SinglyLinkedList {
             current = current.next;
         }
     }
+
+
 
 }
