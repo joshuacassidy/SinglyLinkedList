@@ -15,28 +15,28 @@ public class SinglyLinkedList<T extends Comparable<T>> {
         //Creating a new instance of the node
         Node node = new Node();
         // the data of this instance is set to the data passed into this method
-        node.data = data;
+        node.setData(data);
         //inserting first at the very start of the list just after  first. nodes next field needs to be the old
-        node.next = first;
+        node.setNext(first);
         // then we take the first variable and point it to the new node
         first = node;
     }
 
-    public void insertLast(T data){
+    public void insertLast(T data)
         if(first != null){
             //setting the current to the first
             Node current = first;
 
-            while(current.next != null){
+            while(current.getNext() != null){
                 // pushing the current to the last node
-                current = current.next;
+                current = current.getNext();
             }
             // creating a new node
             Node node = new Node();
             // setting the new nodes data
-            node.data = data;
+            node.setData(data);
             // pointing the current to this node.
-            current.next = node;
+            current.setNext(node);
         }
         else {
             insertFirst(data);
@@ -49,7 +49,7 @@ public class SinglyLinkedList<T extends Comparable<T>> {
         // temp variable current first
         Node temp = first;
         // changing first points to so the old first (temp) has nothing pointing to it and is thus deleted.
-        first = first.next;
+        first = first.getNext();
         return temp;
     }
 
@@ -60,7 +60,7 @@ public class SinglyLinkedList<T extends Comparable<T>> {
         while (current != null){
             current.displayNode();
             // changing the current to the next value
-            current = current.next;
+            current = current.getNext();
         }
     }
 

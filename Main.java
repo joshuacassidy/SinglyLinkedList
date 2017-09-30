@@ -10,6 +10,7 @@ public class Main {
         singlyLinkedList.insertLast("6");
         singlyLinkedList.deleteFirst();
 
+
         singlyLinkedList.displayList();
         System.out.println(singlyLinkedList.isEmpty() ? "The Linked List is empty." : "The Linked List is not empty.");
     }
